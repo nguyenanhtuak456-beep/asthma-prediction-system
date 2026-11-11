@@ -25,13 +25,13 @@ jobs:
 
       - name: Run fetch and process
         run: |
-          python src/fetch_and_process.py
+          python fetch_and_process.py
 
       - name: Run retrain script
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          python models/retrain.py
+          python retrain.py
 
       - name: Commit and push data changes to GitHub
         run: |
