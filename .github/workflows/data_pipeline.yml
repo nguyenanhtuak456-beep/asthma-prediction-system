@@ -23,15 +23,15 @@ jobs:
         run: |
           pip install pandas requests catboost huggingface_hub
 
-      - name: Step 1 - Run fetch and process script
+      - name: Run fetch and process
         run: |
-          python fetch_and_process.py
+          python src/fetch_and_process.py
 
-      - name: Step 3 - Run fine-tune script and push to Hugging Face
+      - name: Run retrain script
         env:
-          HF_TOKEN: ${{ secrets.HF_TOKEN }} # Lấy token bảo mật từ GitHub Secrets bạn vừa tạo
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          python retrain.py
+          python models/retrain.py
 
       - name: Commit and push data changes to GitHub
         run: |
