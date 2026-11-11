@@ -33,9 +33,14 @@ jobs:
         run: |
           python models/retrain.py
 
-      - name: Commit and push data changes to GitHub
+       - name: Run prediction
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: python src/predict.py
+
+      - name: Commit predictions to GitHub
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add dataset/live_processed.csv
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto update live_processed.csv & retrain model" && git push)
+          git add predictions/latest_predictions.csv
+          git diff --staged --quiet || (git commit -m "Auto update predictions" && git push)
