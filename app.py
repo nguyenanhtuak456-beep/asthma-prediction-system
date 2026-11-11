@@ -8,7 +8,7 @@ st.title("Hệ thống Dự báo sớm Nguy cơ Hen suyễn (t+3h) 🌬️")
 # 1. Tải mô hình mới nhất trực tiếp từ Hugging Face Hub về web
 @st.cache_resource
 def load_latest_model():
-    model_path = hf_hub_download(repo_id="username_cua_ban/asthma-catboost-weights", filename="asthma_model.cbm")
+    model_path = hf_hub_download(repo_id="TuDUE/asthma-catboost-weights", filename="asthma_model.cbm")
     model = CatBoostClassifier()
     model.load_model(model_path)
     return model
