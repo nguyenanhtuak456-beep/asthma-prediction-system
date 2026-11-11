@@ -1,0 +1,5 @@
+streamlit
+pandas
+catboost
+huggingface_hub
+requests
