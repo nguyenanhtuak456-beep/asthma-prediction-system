@@ -4,7 +4,7 @@ from catboost import CatBoostClassifier
 from huggingface_hub import hf_hub_download, upload_file
 
 # 1. Cấu hình thông tin Hugging Face Repo của bạn
-HF_REPO_ID = "Tên_User_HuggingFace_Của_Bạn/asthma-catboost-weights"  # Thay bằng ID repo của bạn trên HF
+HF_REPO_ID = "TuDUE/asthma-catboost-weights"  # Thay bằng ID repo của bạn trên HF
 MODEL_FILENAME = "asthma_model.cbm"
 LOCAL_MODEL_PATH = MODEL_FILENAME
 
