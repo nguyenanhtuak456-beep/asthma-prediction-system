@@ -5,6 +5,10 @@ on:
     - cron: '0 * * * *' # Chạy tự động mỗi giờ 1 lần
   workflow_dispatch:
 
+concurrency:
+  group: asthma-pipeline
+  cancel-in-progress: false
+
 jobs:
   update-data-and-retrain:
     runs-on: ubuntu-latest
@@ -33,7 +37,7 @@ jobs:
         run: |
           echo "--- Phiên bản retrain.py đang chạy ---"
           git log -1 --oneline
-          grep -n "shutil.copy\|(v2)" models/retrain.py || true
+          grep -n "shutil.copy\|(v3)" models/retrain.py || true
           # Vá lỗi quyền ghi: copyfile không chép quyền chỉ đọc của file cache Hugging Face
           sed -i 's/shutil\.copy(/shutil.copyfile(/' models/retrain.py
           echo "--------------------------------------"
