@@ -1,61 +1,64 @@
 ﻿city,region,time,pm2_5,us_aqi,predicted_class,predicted_level
-An Giang,Mien_Nam,2026-11-12 04:00:00,12.7,64,1,Trung bình
-Bà Rịa - Vũng Tàu,Mien_Nam,2026-11-12 04:00:00,5.9,38,0,Thấp
-Bình Dương,Mien_Nam,2026-11-12 04:00:00,13.9,67,1,Trung bình
-Bình Phước,Mien_Nam,2026-11-12 04:00:00,5.0,49,0,Thấp
-Bình Thuận,Mien_Trung,2026-11-12 04:00:00,4.8,35,0,Thấp
-Bình Định,Mien_Trung,2026-11-12 04:00:00,4.1,37,0,Thấp
-Bạc Liêu,Mien_Nam,2026-11-12 04:00:00,6.1,43,0,Thấp
-Bắc Kạn,Mien_Bac,2026-11-12 04:00:00,10.4,52,1,Trung bình
-Bắc Ninh,Mien_Bac,2026-11-12 04:00:00,23.7,153,3,Rất cao
-Bến Tre,Mien_Nam,2026-11-12 04:00:00,10.4,61,1,Trung bình
-Cao Bằng,Mien_Bac,2026-11-12 04:00:00,15.8,56,1,Trung bình
-Cà Mau,Mien_Nam,2026-11-12 04:00:00,5.8,42,0,Thấp
-Gia Lai,Mien_Trung,2026-11-12 04:00:00,0.9,34,0,Thấp
-Hà Giang,Mien_Bac,2026-11-12 04:00:00,9.0,53,1,Trung bình
-Hà Nam,Mien_Bac,2026-11-12 04:00:00,42.6,157,3,Rất cao
-Hà Nội,Mien_Bac,2026-11-12 04:00:00,23.7,153,3,Rất cao
-Hà Tĩnh,Mien_Trung,2026-11-12 04:00:00,27.2,71,1,Trung bình
-Hòa Bình,Mien_Bac,2026-11-12 04:00:00,29.0,96,1,Trung bình
-Hưng Yên,Mien_Bac,2026-11-12 04:00:00,36.3,170,3,Rất cao
-Hải Dương,Mien_Bac,2026-11-12 04:00:00,28.8,163,3,Rất cao
-Hải Phòng,Mien_Bac,2026-11-12 04:00:00,15.5,92,1,Trung bình
-Hậu Giang,Mien_Nam,2026-11-12 04:00:00,10.5,53,1,Trung bình
-Khánh Hòa,Mien_Trung,2026-11-12 04:00:00,3.2,35,0,Thấp
-Kiên Giang,Mien_Nam,2026-11-12 04:00:00,15.4,60,1,Trung bình
-Kon Tum,Mien_Trung,2026-11-12 04:00:00,0.7,28,0,Thấp
-Lai Châu,Mien_Bac,2026-11-12 04:00:00,4.5,32,0,Thấp
-Long An,Mien_Nam,2026-11-12 04:00:00,10.4,61,1,Trung bình
-Lào Cai,Mien_Bac,2026-11-12 04:00:00,9.0,51,1,Trung bình
-Lâm Đồng,Mien_Trung,2026-11-12 04:00:00,1.6,24,0,Thấp
-Lạng Sơn,Mien_Bac,2026-11-12 04:00:00,16.3,53,1,Trung bình
-Nam Định,Mien_Bac,2026-11-12 04:00:00,42.6,157,3,Rất cao
-Nghệ An,Mien_Trung,2026-11-12 04:00:00,22.6,76,1,Trung bình
-Ninh Bình,Mien_Bac,2026-11-12 04:00:00,42.6,157,3,Rất cao
-Ninh Thuận,Mien_Trung,2026-11-12 04:00:00,2.9,32,0,Thấp
-Phú Thọ,Mien_Bac,2026-11-12 04:00:00,30.7,92,1,Trung bình
-Phú Yên,Mien_Trung,2026-11-12 04:00:00,4.6,38,0,Thấp
-Quảng Bình,Mien_Trung,2026-11-12 04:00:00,19.1,69,1,Trung bình
-Quảng Nam,Mien_Trung,2026-11-12 04:00:00,5.6,52,1,Trung bình
-Quảng Ngãi,Mien_Trung,2026-11-12 04:00:00,4.4,50,0,Thấp
-Quảng Ninh,Mien_Bac,2026-11-12 04:00:00,9.1,66,1,Trung bình
-Quảng Trị,Mien_Trung,2026-11-12 04:00:00,11.7,65,1,Trung bình
-Sóc Trăng,Mien_Nam,2026-11-12 04:00:00,6.1,50,0,Thấp
-Sơn La,Mien_Bac,2026-11-12 04:00:00,16.4,53,1,Trung bình
-TP. Hồ Chí Minh,Mien_Nam,2026-11-12 04:00:00,11.1,63,1,Trung bình
-Thanh Hóa,Mien_Trung,2026-11-12 04:00:00,31.0,107,2,Cao
-Thái Bình,Mien_Bac,2026-11-12 04:00:00,34.3,143,2,Cao
-Thái Nguyên,Mien_Bac,2026-11-12 04:00:00,12.3,81,1,Trung bình
-Thừa Thiên Huế,Mien_Trung,2026-11-12 04:00:00,10.3,60,1,Trung bình
-Tiền Giang,Mien_Nam,2026-11-12 04:00:00,10.4,61,1,Trung bình
-Trà Vinh,Mien_Nam,2026-11-12 04:00:00,6.0,45,0,Thấp
-Tuyên Quang,Mien_Bac,2026-11-12 04:00:00,16.9,63,1,Trung bình
-Tây Ninh,Mien_Nam,2026-11-12 04:00:00,6.7,53,1,Trung bình
-Vĩnh Long,Mien_Nam,2026-11-12 04:00:00,12.4,66,1,Trung bình
-Vĩnh Phúc,Mien_Bac,2026-11-12 04:00:00,34.0,135,2,Cao
-Yên Bái,Mien_Bac,2026-11-12 04:00:00,33.1,92,1,Trung bình
-Điện Biên,Mien_Bac,2026-11-12 04:00:00,5.3,28,0,Thấp
-Đắk Lắk,Mien_Trung,2026-11-12 04:00:00,2.5,34,0,Thấp
-Đắk Nông,Mien_Trung,2026-11-12 04:00:00,2.7,22,0,Thấp
-Đồng Nai,Mien_Nam,2026-11-12 04:00:00,11.1,63,1,Trung bình
-Đồng Tháp,Mien_Nam,2026-11-12 04:00:00,13.5,66,1,Trung bình
+An Giang,Mien_Nam,2026-11-12 05:00:00,11.0,64,1,Trung bình
+Bà Rịa - Vũng Tàu,Mien_Nam,2026-11-12 05:00:00,6.9,39,0,Thấp
+Bình Dương,Mien_Nam,2026-11-12 05:00:00,13.0,67,1,Trung bình
+Bình Phước,Mien_Nam,2026-11-12 05:00:00,5.8,49,0,Thấp
+Bình Thuận,Mien_Trung,2026-11-12 05:00:00,5.1,36,0,Thấp
+Bình Định,Mien_Trung,2026-11-12 05:00:00,3.9,37,0,Thấp
+Bạc Liêu,Mien_Nam,2026-11-12 05:00:00,5.7,40,0,Thấp
+Bắc Giang,Mien_Bac,2026-11-12 05:00:00,23.5,154,3,Rất cao
+Bắc Kạn,Mien_Bac,2026-11-12 05:00:00,11.6,52,1,Trung bình
+Bắc Ninh,Mien_Bac,2026-11-12 05:00:00,23.5,154,3,Rất cao
+Bến Tre,Mien_Nam,2026-11-12 05:00:00,9.3,60,1,Trung bình
+Cao Bằng,Mien_Bac,2026-11-12 05:00:00,14.0,56,1,Trung bình
+Cà Mau,Mien_Nam,2026-11-12 05:00:00,5.3,39,0,Thấp
+Cần Thơ,Mien_Nam,2026-11-12 05:00:00,11.2,60,1,Trung bình
+Gia Lai,Mien_Trung,2026-11-12 05:00:00,1.1,35,0,Thấp
+Hà Giang,Mien_Bac,2026-11-12 05:00:00,8.6,54,1,Trung bình
+Hà Nam,Mien_Bac,2026-11-12 05:00:00,38.5,157,3,Rất cao
+Hà Nội,Mien_Bac,2026-11-12 05:00:00,23.5,154,3,Rất cao
+Hà Tĩnh,Mien_Trung,2026-11-12 05:00:00,28.3,72,1,Trung bình
+Hòa Bình,Mien_Bac,2026-11-12 05:00:00,27.4,98,1,Trung bình
+Hưng Yên,Mien_Bac,2026-11-12 05:00:00,34.6,171,3,Rất cao
+Hải Dương,Mien_Bac,2026-11-12 05:00:00,25.4,163,3,Rất cao
+Hải Phòng,Mien_Bac,2026-11-12 05:00:00,15.5,93,1,Trung bình
+Hậu Giang,Mien_Nam,2026-11-12 05:00:00,8.3,52,1,Trung bình
+Khánh Hòa,Mien_Trung,2026-11-12 05:00:00,3.3,36,0,Thấp
+Kiên Giang,Mien_Nam,2026-11-12 05:00:00,13.6,60,1,Trung bình
+Kon Tum,Mien_Trung,2026-11-12 05:00:00,0.7,30,0,Thấp
+Lai Châu,Mien_Bac,2026-11-12 05:00:00,4.5,33,0,Thấp
+Long An,Mien_Nam,2026-11-12 05:00:00,9.3,60,1,Trung bình
+Lào Cai,Mien_Bac,2026-11-12 05:00:00,9.6,52,1,Trung bình
+Lâm Đồng,Mien_Trung,2026-11-12 05:00:00,1.8,26,0,Thấp
+Lạng Sơn,Mien_Bac,2026-11-12 05:00:00,15.9,54,1,Trung bình
+Nam Định,Mien_Bac,2026-11-12 05:00:00,38.5,157,3,Rất cao
+Nghệ An,Mien_Trung,2026-11-12 05:00:00,23.3,76,1,Trung bình
+Ninh Bình,Mien_Bac,2026-11-12 05:00:00,38.5,157,3,Rất cao
+Ninh Thuận,Mien_Trung,2026-11-12 05:00:00,3.1,33,0,Thấp
+Phú Thọ,Mien_Bac,2026-11-12 05:00:00,31.1,94,1,Trung bình
+Phú Yên,Mien_Trung,2026-11-12 05:00:00,4.8,38,0,Thấp
+Quảng Bình,Mien_Trung,2026-11-12 05:00:00,18.9,69,1,Trung bình
+Quảng Nam,Mien_Trung,2026-11-12 05:00:00,6.0,51,1,Trung bình
+Quảng Ngãi,Mien_Trung,2026-11-12 05:00:00,4.6,49,0,Thấp
+Quảng Ninh,Mien_Bac,2026-11-12 05:00:00,8.9,66,1,Trung bình
+Quảng Trị,Mien_Trung,2026-11-12 05:00:00,11.5,65,1,Trung bình
+Sóc Trăng,Mien_Nam,2026-11-12 05:00:00,5.6,45,0,Thấp
+Sơn La,Mien_Bac,2026-11-12 05:00:00,16.4,54,1,Trung bình
+TP. Hồ Chí Minh,Mien_Nam,2026-11-12 05:00:00,10.9,62,1,Trung bình
+Thanh Hóa,Mien_Trung,2026-11-12 05:00:00,29.0,108,2,Cao
+Thái Bình,Mien_Bac,2026-11-12 05:00:00,30.7,146,2,Cao
+Thái Nguyên,Mien_Bac,2026-11-12 05:00:00,13.0,82,1,Trung bình
+Thừa Thiên Huế,Mien_Trung,2026-11-12 05:00:00,10.4,60,1,Trung bình
+Tiền Giang,Mien_Nam,2026-11-12 05:00:00,9.3,60,1,Trung bình
+Trà Vinh,Mien_Nam,2026-11-12 05:00:00,5.4,41,0,Thấp
+Tuyên Quang,Mien_Bac,2026-11-12 05:00:00,18.3,64,1,Trung bình
+Tây Ninh,Mien_Nam,2026-11-12 05:00:00,7.6,53,1,Trung bình
+Vĩnh Long,Mien_Nam,2026-11-12 05:00:00,10.9,65,1,Trung bình
+Vĩnh Phúc,Mien_Bac,2026-11-12 05:00:00,34.2,137,2,Cao
+Yên Bái,Mien_Bac,2026-11-12 05:00:00,31.9,94,1,Trung bình
+Điện Biên,Mien_Bac,2026-11-12 05:00:00,4.4,29,0,Thấp
+Đà Nẵng,Mien_Trung,2026-11-12 05:00:00,8.7,54,1,Trung bình
+Đắk Lắk,Mien_Trung,2026-11-12 05:00:00,2.3,35,0,Thấp
+Đắk Nông,Mien_Trung,2026-11-12 05:00:00,2.8,25,0,Thấp
+Đồng Nai,Mien_Nam,2026-11-12 05:00:00,10.9,62,1,Trung bình
+Đồng Tháp,Mien_Nam,2026-11-12 05:00:00,11.9,66,1,Trung bình
