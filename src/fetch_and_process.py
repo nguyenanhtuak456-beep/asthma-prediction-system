@@ -2,7 +2,7 @@ import os
 import time
 import requests
 import pandas as pd
-from datetime import datetime
+from datetime import datetime, timedelta
 
 # 1. Cấu hình thư mục lưu trữ cho GitHub Actions
 DATASET_DIR = "dataset"
@@ -80,7 +80,8 @@ CITIES_63 = {
     "camau": {"name": "Cà Mau", "region": "Mien_Nam", "lat": 9.1769, "lon": 105.1524}
 }
 
-START_DATE = "2024-01-01"
+# Chỉ lấy 7 ngày gần nhất (đủ cho lag24; phần cũ hơn model đã học rồi nhờ mốc last_trained.json)
+START_DATE = (datetime.now() - timedelta(days=7)).strftime("%Y-%m-%d")
 END_DATE = datetime.now().strftime("%Y-%m-%d")
 
 # 3. Hàm gán nhãn nguy cơ hen suyễn chuẩn hóa y tế
@@ -113,7 +114,7 @@ for key, city in CITIES_63.items():
     )
 
     success = False
-    for attempt in range(3):
+    for attempt in range(5):
         try:
             response = requests.get(url, timeout=20)
             if response.status_code == 200 and "hourly" in response.json():
@@ -127,12 +128,15 @@ for key, city in CITIES_63.items():
                 break
             elif response.status_code == 429:
                 print(f"⚠️ Bị nghẽn API tại {city['name']}, chờ 10 giây thử lại...")
-                time.sleep(10)
+                time.sleep(10 * (attempt + 1))
             else:
                 break
         except Exception as e:
             time.sleep(4)
             
+    if not success:
+        print(f"❌ KHÔNG lấy được dữ liệu của {city['name']} sau nhiều lần thử (sẽ thiếu tỉnh này).")
+
     # Nghỉ nhẹ giữa các request để bảo vệ IP không bị chặn
     time.sleep(2.5)
 
