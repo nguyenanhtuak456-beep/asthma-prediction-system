@@ -164,6 +164,9 @@ if all_dfs:
             # Diff features
             combined_df[f'{col}_diff_1'] = combined_df.groupby('city')[col].diff(1)
 
+    # Nhãn mục tiêu: mức nguy cơ của GIỜ SAU, tính riêng từng tỉnh (dữ liệu đã sắp theo city, time)
+    combined_df['target_next_hour'] = combined_df.groupby('city')['asthma_risk_level'].shift(-1)
+
     # 6. Lưu ra file live_processed.csv theo đúng yêu cầu cấu trúc dự án
     output_file_path = os.path.join(DATASET_DIR, "live_processed.csv")
     combined_df.to_csv(output_file_path, index=False, encoding="utf-8-sig")
