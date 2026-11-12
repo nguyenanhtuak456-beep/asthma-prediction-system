@@ -8,8 +8,8 @@ from huggingface_hub import HfApi, CommitOperationAdd, hf_hub_download
 
 # ===================== CẤU HÌNH =====================
 HF_REPO_ID = "TuDUE/asthma-catboost-weights"
-MODEL_FILENAME = "asthma_model.cbm"
-STATE_FILENAME = "last_trained.json"      # file lưu mốc "lần học cuối" trên Hugging Face
+MODEL_FILENAME = "asthma_model_v2.cbm"   # v2: bài toán dự báo giờ sau (model v1 học nhãn giờ hiện tại)
+STATE_FILENAME = "last_trained_v2.json"   # file lưu mốc "lần học cuối" trên Hugging Face
 LOCAL_MODEL_PATH = MODEL_FILENAME
 DATA_PATH = "dataset/live_processed.csv"
 
@@ -18,7 +18,7 @@ INCREMENTAL_ITERATIONS = 30    # số cây thêm vào mỗi lần học dữ li�
 MIN_NEW_ROWS = 500             # ít hơn số dòng mới này thì bỏ qua (63 tỉnh x 8 giờ ~ 504)
 
 HF_TOKEN = os.environ.get("HF_TOKEN")
-print("=== BẮT ĐẦU QUÁ TRÌNH FINE-TUNE TỰ ĐỘNG (v3) ===")
+print("=== BẮT ĐẦU QUÁ TRÌNH FINE-TUNE TỰ ĐỘNG (v3, dự báo giờ sau) ===")
 
 # ===================== 1. TẢI MODEL CŨ =====================
 have_model = False
@@ -60,7 +60,9 @@ print(f"Đã đọc dữ liệu thành công với {len(df):,} dòng.")
 
 # Bỏ các giờ tương lai (API trả cả số liệu dự báo của hôm nay, chưa phải số liệu thật)
 now_utc = pd.Timestamp.now(tz="UTC").tz_localize(None)
-df = df[df["time"] <= now_utc]
+# Chỉ giữ các giờ mà GIỜ SAU đã có số liệu thật (để nhãn mục tiêu không dính số liệu dự báo)
+df = df[df["time"] + pd.Timedelta(hours=1) <= now_utc]
+df = df.dropna(subset=["target_next_hour"])
 
 if last_trained is not None:
     if df["time"].min() > last_trained:
@@ -81,8 +83,10 @@ if df_new.empty:
     sys.exit(0)
 
 # ===================== 4. CHUẨN BỊ X, y =====================
-features = [c for c in df.columns if c not in ["time", "city", "region", "asthma_risk_level"]]
-target = "asthma_risk_level"
+# Feature = thông tin của giờ hiện tại và quá khứ; nhãn giờ sau (target_next_hour) tuyệt đối không được lọt vào feature
+features = [c for c in df.columns if c not in ["time", "city", "region", "target_next_hour"]]
+target = "target_next_hour"
+df[target] = df[target].astype(int)
 
 
 def new_model(n_iter):
