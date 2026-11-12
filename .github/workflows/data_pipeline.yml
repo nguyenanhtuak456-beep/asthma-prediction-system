@@ -25,22 +25,22 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install pandas requests catboost huggingface_hub
+          pip install pandas requests catboost huggingface_hub scikit-learn
 
       - name: Run fetch and process
         run: |
           python -u src/fetch_and_process.py
 
+      - name: Evaluate model on unseen data
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          python models/evaluate.py
+
       - name: Run retrain script
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          echo "--- Phiên bản retrain.py đang chạy ---"
-          git log -1 --oneline
-          grep -n "shutil.copy\|(v3)" models/retrain.py || true
-          # Vá lỗi quyền ghi: copyfile không chép quyền chỉ đọc của file cache Hugging Face
-          sed -i 's/shutil\.copy(/shutil.copyfile(/' models/retrain.py
-          echo "--------------------------------------"
           python models/retrain.py
 
       - name: Run prediction
@@ -53,5 +53,5 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add predictions/latest_predictions.csv
+          git add predictions/
           git diff --staged --quiet || (git commit -m "Auto update predictions" && git push)
