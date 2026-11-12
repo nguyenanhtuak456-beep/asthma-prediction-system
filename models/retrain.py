@@ -9,7 +9,7 @@ HF_REPO_ID = "TuDUE/asthma-catboost-weights"
 MODEL_FILENAME = "asthma_model.cbm"
 LOCAL_MODEL_PATH = MODEL_FILENAME
 
-print("=== BẮT ĐẦU QUÁ TRÌNH FINE-TUNE TỰ ĐỘNG ===")
+print("=== BẮT ĐẦU QUÁ TRÌNH FINE-TUNE TỰ ĐỘNG (v2) ===")
 
 # 2. Tải mô hình cũ từ Hugging Face về (nếu có)
 try:
@@ -23,6 +23,7 @@ try:
     if os.path.exists(LOCAL_MODEL_PATH):
         os.remove(LOCAL_MODEL_PATH)
     shutil.copyfile(downloaded_model_path, LOCAL_MODEL_PATH)
+    os.chmod(LOCAL_MODEL_PATH, 0o644)  # đảm bảo file cục bộ ghi được
     print("✅ Tải mô hình cũ thành công!")
 except Exception as e:
     print(f"⚠️ Không tìm thấy mô hình cũ trên Hugging Face ({e}), sẽ tiến hành train mới hoàn toàn.")
