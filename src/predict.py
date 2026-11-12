@@ -4,7 +4,7 @@ from catboost import CatBoostClassifier
 from huggingface_hub import hf_hub_download
 
 HF_REPO_ID = "TuDUE/asthma-catboost-weights"
-MODEL_FILENAME = "asthma_model.cbm"
+MODEL_FILENAME = "asthma_model_v2.cbm"
 DATA_PATH = "dataset/live_processed.csv"
 OUT_DIR = "predictions"
 OUT_PATH = os.path.join(OUT_DIR, "latest_predictions.csv")
@@ -40,7 +40,8 @@ latest["predicted_class"] = model.predict(X).flatten().astype(int)
 latest["predicted_level"] = latest["predicted_class"].map(LABELS)
 
 # 4. Lưu file kết quả nhỏ (khoảng 63 dòng)
-out_cols = ["city", "region", "time", "pm2_5", "us_aqi", "predicted_class", "predicted_level"]
+latest["forecast_for"] = latest["time"] + pd.Timedelta(hours=1)   # mức nguy cơ này là DỰ BÁO cho giờ kế tiếp
+out_cols = ["city", "region", "time", "forecast_for", "pm2_5", "us_aqi", "predicted_class", "predicted_level"]
 os.makedirs(OUT_DIR, exist_ok=True)
 latest[out_cols].sort_values("city").to_csv(OUT_PATH, index=False, encoding="utf-8-sig")
 print(f"Đã lưu {len(latest)} dự đoán tại: {OUT_PATH}")
