@@ -25,7 +25,7 @@ jobs:
 
       - name: Run fetch and process
         run: |
-          python src/fetch_and_process.py
+          python -u src/fetch_and_process.py
 
       - name: Run retrain script
         env:
@@ -33,10 +33,11 @@ jobs:
         run: |
           python models/retrain.py
 
-       - name: Run prediction
+      - name: Run prediction
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: python src/predict.py
+        run: |
+          python src/predict.py
 
       - name: Commit predictions to GitHub
         run: |
