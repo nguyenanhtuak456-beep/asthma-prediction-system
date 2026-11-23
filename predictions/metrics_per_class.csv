@@ -1,9 +1,9 @@
 model,class,precision,recall,f1,support
-catboost,0,1.0,1.0,1.0,123
-catboost,1,0.9925,0.9565,0.9742,276
-catboost,2,0.8617,0.931,0.895,87
-catboost,3,0.8095,0.9444,0.8718,18
-baseline_giu_nguyen,0,0.984,1.0,0.9919,123
-baseline_giu_nguyen,1,0.9924,0.9493,0.9704,276
-baseline_giu_nguyen,2,0.8617,0.931,0.895,87
-baseline_giu_nguyen,3,0.8095,0.9444,0.8718,18
+catboost,0,1.0,1.0,1.0,83
+catboost,1,1.0,0.9768,0.9883,259
+catboost,2,0.8571,1.0,0.9231,36
+catboost,3,0.0,,,0
+baseline_giu_nguyen,0,0.9765,1.0,0.9881,83
+baseline_giu_nguyen,1,1.0,0.9691,0.9843,259
+baseline_giu_nguyen,2,0.8571,1.0,0.9231,36
+baseline_giu_nguyen,3,0.0,,,0
